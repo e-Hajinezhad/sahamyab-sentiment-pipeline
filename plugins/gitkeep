@@ -1,0 +1,6 @@
+# This folder is where custom Airflow plugins (hooks, operators, sensors)
+# would go, if this project ever needs any. It's currently empty, kept
+# here (via this file) so the folder exists after cloning, since git
+# cannot track empty directories on its own.
+#
+# See: https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/plugins.html

@@ -1,0 +1,11 @@
+# Dependencies for scripts/generate_sentiment_chart.py
+# This runs on your own machine, NOT inside the Airflow containers,
+# so it's kept separate from requirements.txt (which is for the Airflow image).
+
+numpy==1.26.4
+clickhouse-driver==0.2.7
+pandas==2.1.1
+plotly==5.22.0
+matplotlib==3.8.4
+jdatetime==5.0.0
+python-dotenv==1.0.1

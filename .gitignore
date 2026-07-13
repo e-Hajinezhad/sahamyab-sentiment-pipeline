@@ -1,0 +1,34 @@
+# Secrets - never commit real credentials
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Airflow
+logs/
+airflow.cfg
+airflow.db
+standalone_admin_password.txt
+
+# ML model files - large binaries, download from Hugging Face instead
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Docker
+docker-compose.override.yml
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+~.docx
