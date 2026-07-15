@@ -32,3 +32,6 @@ Thumbs.db
 .vscode/
 .idea/
 ~.docx
+
+# Microsoft Office temp/lock files (e.g. ~$mydoc.docx)
+~$*

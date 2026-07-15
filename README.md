@@ -1,6 +1,6 @@
 # Sahamyab Twitter Sentiment Pipeline
 
-An end-to-end data pipeline that collects stock-market-related posts from **Sahamyab** — an Iranian financial platform that mirrors posts from X (Twitter) about the stock market — stores them, cleans them, and runs sentiment analysis on them. Everything is scheduled and managed by **Apache Airflow**.
+An end-to-end data pipeline that collects stock-market-related posts using **Sahamyab's API** — an Iranian service that fetches market-related posts from X (Twitter) — stores them, cleans them, and runs sentiment analysis on them. Everything is scheduled and managed by **Apache Airflow**.
 
 The goal of this project was to practice building a real data pipeline — not just writing scripts, but also handling scheduling, failures, and recovery like a real system needs.
 
