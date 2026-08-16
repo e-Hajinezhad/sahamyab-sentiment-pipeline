@@ -118,7 +118,7 @@ SETTINGS index_granularity = 8192
 To avoid running heavy aggregation queries on the full `tweets` table every time, there is a materialized view that keeps a running daily summary automatically, using ClickHouse's `SummingMergeTree` engine:
 
 ```sql
-CREATE MATERIALIZED VIEW analytics.tweets_daily_stats
+![sahamyab_twitter_etl](C:\Users\Asus\Desktop\Sahamyab_Project\docs\sahamyab_twitter_etl.png)![sentiment_analysis](C:\Users\Asus\Desktop\Sahamyab_Project\docs\sentiment_analysis.png)CREATE MATERIALIZED VIEW analytics.tweets_daily_stats
 ENGINE = SummingMergeTree()
 ORDER BY (date, type)
 AS
@@ -137,7 +137,12 @@ Every time a new tweet is inserted into `analytics.tweets`, ClickHouse updates t
 ## Airflow DAGs
 
 - **`sahamyab_twitter_etl`** — extract → store raw → transform → load → verify. Runs every 15–20 minutes.
+
 - **`sahamyab_sentiment_analysis`** — checks for unlabeled tweets, runs NEXARA sentiment model in batches, writes results back, shows a sentiment distribution summary. Runs hourly.
+
+  ![ETL DAG graph](sahamyab_twitter_etl.png)
+
+  ![Sentiment DAG graph](sentiment_analysis.png)
 
 ## Results
 
@@ -145,11 +150,11 @@ Sentiment breakdown of collected tweets, computed directly from `analytics.tweet
 
 **Hourly** (last 10 days):
 ![Hourly sentiment chart](sentiment_chart_hourly.png)
-[View the interactive version](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/sentiment_chart_hourly.html) *(set this up once — see below)*
+[View the interactive version](https://e-Hajinezhad.github.io/sahamyab-sentiment-pipeline/sentiment_chart_hourly.html) *(set this up once — see below)*
 
 **Daily** (last 10 days):
 ![Daily sentiment chart](sentiment_chart_daily.png)
-[View the interactive version](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/sentiment_chart_daily.html) *(set this up once — see below)*
+[View the interactive version](https://e-Hajinezhad.github.io/sahamyab-sentiment-pipeline/sentiment_chart_daily.html) *(set this up once — see below)*
 
 Dates are shown in the Persian (Shamsi) calendar, since the data is about the Iranian stock market.
 
