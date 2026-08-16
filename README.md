@@ -140,9 +140,11 @@ Every time a new tweet is inserted into `analytics.tweets`, ClickHouse updates t
 
 - **`sahamyab_sentiment_analysis`** — checks for unlabeled tweets, runs NEXARA sentiment model in batches, writes results back, shows a sentiment distribution summary. Runs hourly.
 
-  ![ETL DAG graph](sahamyab_twitter_etl.png)
+  ![ETL DAG graph](docs/sahamyab_twitter_etl.png)
 
-  ![Sentiment DAG graph](sentiment_analysis.png)
+  
+  
+  ![Sentiment DAG graph](docs/sentiment_analysis.png)
 
 ## Results
 
